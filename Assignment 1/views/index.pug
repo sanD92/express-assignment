@@ -1,0 +1,44 @@
+doctype html    
+html
+    head
+        title Approval System
+    body
+        
+        div
+            form(action="/api/register", method="post")
+                h3(style={'text-align': 'center','height': '','width': '20%'})  Register Approver
+                div(style={ 'padding': '20px','border-style': 'groove', 'border-width':'5px','height': '250px','width': '20%'})
+                    p
+                        | Name: 
+                        br
+                        input(type='text', name='name', value='')
+                        br 
+                        br
+                        | Designation:
+                        br
+                        input(type='text', name='designation', value='')
+                        br
+                        br
+                        | Role:
+                        br  
+                        input(type='text', name='role', value='')
+                        br
+                        br
+                        input(type='submit', value='Submit')
+        div
+            form(action="/api/services", method="post")
+                h3(style={'text-align': 'center','height': '','width': '20%'})  Register Services
+                div(style={ 'padding': '20px','border-style': 'groove', 'border-width':'5px','height': '200','width': '20%'})
+                    p
+                        | Name: 
+                        br
+                        input(type='text', name='name', value='')
+                        br 
+                        br
+                        | Approvals:
+                        br
+                        input(type='text', name='approvals', value='')
+                        br
+                        br
+                        input(type='submit', value='Submit') 
+        
