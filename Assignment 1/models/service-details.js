@@ -2,7 +2,7 @@ const mongoose= require('mongoose');
 const Schema = mongoose.Schema;
 
 ServiceDetailsSchema= new Schema({
-    result : [{
+    result : {
           name :{
             type:String
           },
@@ -10,7 +10,7 @@ ServiceDetailsSchema= new Schema({
             type:String
           }
         
-    }],
+    },
     status :{
         code:{
             type:Number

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema =mongoose.Schema;
 
 const registerApprovalSchema =new Schema({
-        request :[ {
+        request : {
             name:{
                 type:String
             },
@@ -13,7 +13,7 @@ const registerApprovalSchema =new Schema({
             role:{
                 type:String
             }
-        }]
+        }
 });
 const RegisterApproval =mongoose.model('register-approver',registerApprovalSchema);
 module.exports =RegisterApproval;

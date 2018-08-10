@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const registerServicesSchema = new Schema({
-    request: [
+    request: 
         {
             name: {
                 type: String
@@ -11,7 +11,7 @@ const registerServicesSchema = new Schema({
                 type: String
             }
         }
-    ]
+    
 
 });
 

@@ -2,8 +2,9 @@ doctype html
 html
     head
         title Approval System
-    body
-        
+        style
+            include style.css
+    body(onload="alert(#{colors});")
         div
             form(action="/api/register", method="post")
                 h3(style={'text-align': 'center','height': '','width': '20%'})  Register Approver
@@ -41,4 +42,29 @@ html
                         br
                         br
                         input(type='submit', value='Submit') 
-        
+        div
+            h3 List of Services
+            hr
+            div
+                 form(action="/api/services", method="get")
+                        input(type='submit', value='Refresh') 
+            br
+            table
+                thead
+                    tr
+                        th Service Id
+                        th Service Name
+                        th Approve
+                tbody
+                    for val in serviceArrayObejct
+                        tr
+                            td #{val.result.serviceId}
+                            td #{val.result.name}
+                            td
+                                a(href="#")
+                                    button(type="button") Approve
+                    else
+                        tr
+                            td no data..... click refresh to load data
+                            td no data 
+                            td no data 
